@@ -17,7 +17,7 @@ const [img,setImg]=useState("")
 
     const [message, setMessage] = useState('');
     const [wrong, setWrong] = useState('');
-    const [count, setCount] = useState(0);
+
     const navigate= useNavigate();
 
 
@@ -177,7 +177,7 @@ setRedirect(false);
         );
     }
     return (
-        <div className=" container flex flex-col  h-screen w-screen items-center justify-center ">
+        <div className=" container m-0 flex flex-col  min-h-screen w-full items-center justify-center ">
 
 
                 <div className="gli lg:relative lg:top-10 flex flex-col items-center my-5 lg:my-10  font-medium font-Rubik text-[#ff0130] text-5xl " data-text="BLACKOUT">BLACKOUT</div>
@@ -192,12 +192,12 @@ setRedirect(false);
                 </CopyToClipboard>}
                 <div className="flex flex-col h-1/2 w-full items-center justify-center">
 
-                    <img alt="img" src={img} className="flex flex-col h-full w-full"/>
+                    <img alt="img" src={img} className="flex flex-col  max-h-56 w-full"/>
                 </div>
 
-                <div className="flex flex-col h-[10%] w-[80%] lg:w-1/4 justify-center">
+                <div className="flex flex-col   w-[80%] lg:w-1/4 justify-center">
                     {show&&
-                    <input className="h-full w-full xl: w-full  border-b-[#F9EB05] tracking-wide border-l-[#f9eb054d] border-t-[#f9eb054d] border-r-[#F9EB05] border-b-4 border-r-4 font-VT323 text-2xl text-center text-[#00e6f6] bg-[#ffee0a26] outline-none" type="text" placeholder="Type your answer" autoFocus='True' value={message} onChange={handleChange}
+                    <input className="h-full w-full xl: w-full p-6 border-b-[#F9EB05] tracking-wide border-l-[#f9eb054d] border-t-[#f9eb054d] border-r-[#F9EB05] border-b-4 border-r-4 font-VT323 text-2xl text-center text-[#00e6f6] bg-[#ffee0a26] outline-none" type="text" placeholder="Type your answer" autoFocus='True' value={message} onChange={handleChange}
                            required/>}
                 </div>
 
@@ -205,7 +205,7 @@ setRedirect(false);
                 {show&&
                 <button className="submit font-VT323 text-2xl text-white font-light  w-full h-[65px] tracking-widest  " onClick={Anssubmit}>SUBMIT</button>}
             </div>
-            <p id="error">{wrong}</p>
+            <p className="flex flex-col items-center font-Rubik  text-[#ff0130] text-2xl">{wrong}</p>
 
               </div>
 
