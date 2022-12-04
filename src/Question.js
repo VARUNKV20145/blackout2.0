@@ -154,27 +154,21 @@ setRedirect(false);
 
     if(isLoading){
         return (
-            <div className="con">
+            <div className="container flex flex-col  h-screen w-screen items-center justify-center ">
                 <div className="container">
 
                     <div className="wrap-top">
 
-                        <div  className="loading loading--center loading--glitch loading--animation"
+                        <div  className="loading loading--center loading--glitch loading--animation relative text-[#eb0005] font-Rubik text-5xl"
                              data-title="Loading...">
                             Loading...
                         </div>
 
-                        <div id="author-source" className="clearfix">
 
-                        </div>
                     </div>
                 </div>
 
-                <div className="wrap-mid">
 
-
-                </div>
-                <p>{wrong}</p>
 
 
 
@@ -183,36 +177,37 @@ setRedirect(false);
         );
     }
     return (
-        <div className="container">
-            <div className="Head">
-                <div className="gli" data-text="BLACKOUT">BLACKOUT</div>
+        <div className=" container flex flex-col  h-screen w-screen items-center justify-center ">
 
 
-            </div>
-            {show? <p>{tem.question}</p>:<p></p>}
-              <div className="wrap-top">
+                <div className="gli lg:relative lg:top-10 flex flex-col items-center my-5 lg:my-10  font-medium font-Rubik text-[#ff0130] text-5xl " data-text="BLACKOUT">BLACKOUT</div>
+
+
+
+            {show? <p className="flex flex-col items-center font-Rubik  text-[#ff0130] text-2xl ">{tem.question}</p>:<p></p>}
+              <div className=" flex flex-col h-full w-full items-center gap-5 ">
                 {show&&copy&&<CopyToClipboard id="copy" value="Caution" text={"QSBzcGlkZXIgaXMgdHJ5aW5nIHRvIGJ1aWxkIGEgd2ViIGZvciBpdHNlbGYuIEl0IGRvdWJsZXMgdGhlIHdvcmsgZG9uZSBldmVyeSBkYXkuIElmIHRoZSBzcGlkZXIgY29tcGxldGVseSBidWlsdCB0aGUgd2ViIGluIDUwIGRheXMsIGhvdyBtYW55IGRheXMgZGlkIGl0IHRha2UgZm9yIHRoZSBzcGlkZXIgdG8gYnVpbGQgMjUlIG9mIHRoZSB3ZWI/"} onCopy={() => window.alert("Copied to Clipboard")}>
 
                     <p className="copy">Don't Touch</p>
                 </CopyToClipboard>}
-                <div id="quote">
+                <div className="flex flex-col h-1/2 w-full items-center justify-center">
 
-                    <img alt="img" src={img}/>
+                    <img alt="img" src={img} className="flex flex-col h-full w-full"/>
                 </div>
 
-                <div id="author-source" className="clearfix">
+                <div className="flex flex-col h-[10%] w-[80%] lg:w-1/4 justify-center">
                     {show&&
-                    <input className="Answerfield" type="text" placeholder="Type your answer" autoFocus='True' value={message} onChange={handleChange}
+                    <input className="h-full w-full xl: w-full  border-b-[#F9EB05] tracking-wide border-l-[#f9eb054d] border-t-[#f9eb054d] border-r-[#F9EB05] border-b-4 border-r-4 font-VT323 text-2xl text-center text-[#00e6f6] bg-[#ffee0a26] outline-none" type="text" placeholder="Type your answer" autoFocus='True' value={message} onChange={handleChange}
                            required/>}
                 </div>
-            </div>
 
-            <div className="wrap-mid">
+            <div className="flex flex-col w-[80%] lg:w-1/4 ">
                 {show&&
-                <button id="submit" onClick={Anssubmit}>SUBMIT</button>}
+                <button className="submit font-VT323 text-2xl text-white font-light  w-full h-[65px] tracking-widest  " onClick={Anssubmit}>SUBMIT</button>}
             </div>
             <p id="error">{wrong}</p>
 
+              </div>
 
         </div>
 

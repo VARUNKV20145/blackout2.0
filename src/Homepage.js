@@ -47,11 +47,11 @@ function Homepage() {
 
 if(!loading){
     return (
-        <div className="front-wrap">
-            <h1 className="front-heading">BLACKOUT</h1>
-            <div className="grid-container">
-                <div id="aidiv" className="loading loading--center loading--typing loading--animation">An AI has gone Rogue</div>
-                <div id="loaddiv" className="loading loading--center loading--glitch loading--animation" data-title="Loading...">
+        <div className="container overflow-scroll flex h-screen w-screen selection:text-pink-600 overflow-scroll bg-purple-600 flex flex-col gap-10 justify-center items-center">
+            <h1 className="gli font-medium font-Rubik text-[#ff0130] text-5xl">BLACKOUT</h1>
+            <div className="flex flex-col h-3/4 gap-y-4 w-full sm:grid grid-cols-2 gap-x-20  h-full w-3/4  justify-items-stretch">
+                <div id="aidiv" className="loading loading--center loading--typing loading--animation absolute text-[#eb0005]  text-5xl">An AI has gone Rogue</div>
+                <div id="loaddiv" className="loading loading--center loading--glitch loading--animation relative text-[#eb0005] font-Rubik text-5xl" data-title="Loading...">
                     Loading...
                 </div>
 
@@ -67,12 +67,12 @@ if(!loading){
     return (
         <div className="container overflow-scroll flex h-screen w-screen selection:text-pink-600 overflow-scroll bg-purple-600 flex flex-col gap-10 justify-center items-center">
         <h1 className="gli font-medium font-Rubik text-[#ff0130] text-5xl">BLACKOUT</h1>
-        <div className=" flex flex-col h-3/4 gap-y-4 w-full   sm:grid grid-cols-2 gap-x-20  h-full w-3/4  justify-items-stretch ">
+        <div className=" flex flex-col h-3/4 gap-y-4 w-full sm:grid grid-cols-2 gap-x-20  h-full w-3/4  justify-items-stretch ">
             { tem && tem.questions.length > 0 ?
 tem.questions.map((item)=>
 
-            <a href={"/home/"+item.q_id } className="flex  flex-col  bg-[#00000033] justify-center  items-center  border-2 border-[#eb0005]">
-                <h2 className="flex justify-center justify-items-center font-Rubik w-full text-xl sm:font-Rubik font-lighter text-2xl text-[#eb0005] ">
+            <a href={"/home/"+item.q_id } className="flex h-[99%] flex-col rounded bg-[#00000033] justify-center  items-center  border-2 border-[#eb0005]">
+                <h2 className="flex justify-center justify-items-center font-Rubik w-full text-xl sm:font-Rubik font-lighter text-5xl text-[#eb0005] ">
                     {item.question}
                 </h2>
             </a>
