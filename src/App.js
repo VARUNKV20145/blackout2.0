@@ -33,7 +33,7 @@ function Login() {
     }
   return (
 
-      <div className="container h-screen w-screen selection:text-pink-600 bg-purple-600 flex flex-col  items-center">
+      <div className="container h-screen w-screen lg:max-w-[100vw] selection:text-pink-600 bg-purple-600 flex flex-col  items-center">
           <div className="relative  top-2.5">
               <div class="gli font-medium font-Rubik text-[#ff0130] text-5xl">BLACKOUT</div>
           </div>
